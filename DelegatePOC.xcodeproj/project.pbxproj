@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1361360A2144CF9000723944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136136092144CF9000723944 /* AppDelegate.swift */; };
-		1361360C2144CF9000723944 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361360B2144CF9000723944 /* ViewController.swift */; };
 		1361360F2144CF9000723944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1361360D2144CF9000723944 /* Main.storyboard */; };
 		136136112144CF9100723944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 136136102144CF9100723944 /* Assets.xcassets */; };
 		136136142144CF9100723944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 136136122144CF9100723944 /* LaunchScreen.storyboard */; };
 		1361361F2144CF9100723944 /* DelegatePOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361361E2144CF9100723944 /* DelegatePOCTests.swift */; };
 		1361362A2144CF9100723944 /* DelegatePOCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136136292144CF9100723944 /* DelegatePOCUITests.swift */; };
+		136136382144D00300723944 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136136372144D00300723944 /* BaseViewController.swift */; };
+		1361363A2144D02B00723944 /* SelectionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136136392144D02B00723944 /* SelectionPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		136136062144CF9000723944 /* DelegatePOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DelegatePOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		136136092144CF9000723944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1361360B2144CF9000723944 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1361360E2144CF9000723944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		136136102144CF9100723944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		136136132144CF9100723944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		136136252144CF9100723944 /* DelegatePOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelegatePOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		136136292144CF9100723944 /* DelegatePOCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatePOCUITests.swift; sourceTree = "<group>"; };
 		1361362B2144CF9100723944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		136136372144D00300723944 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		136136392144D02B00723944 /* SelectionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				136136092144CF9000723944 /* AppDelegate.swift */,
-				1361360B2144CF9000723944 /* ViewController.swift */,
 				1361360D2144CF9000723944 /* Main.storyboard */,
 				136136102144CF9100723944 /* Assets.xcassets */,
 				136136122144CF9100723944 /* LaunchScreen.storyboard */,
 				136136152144CF9100723944 /* Info.plist */,
+				136136372144D00300723944 /* BaseViewController.swift */,
+				136136392144D02B00723944 /* SelectionPageViewController.swift */,
 			);
 			path = DelegatePOC;
 			sourceTree = "<group>";
@@ -256,8 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1361360C2144CF9000723944 /* ViewController.swift in Sources */,
 				1361360A2144CF9000723944 /* AppDelegate.swift in Sources */,
+				136136382144D00300723944 /* BaseViewController.swift in Sources */,
+				1361363A2144D02B00723944 /* SelectionPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

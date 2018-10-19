@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Base View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BaseViewController" customModule="DelegatePOC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="YCI-bJ-puz">
+                                <rect key="frame" x="27.5" y="100" width="320" height="286"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94v-ek-HWJ">
+                                <rect key="frame" x="87.5" y="517" width="200" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.52581872616133341" blue="0.47400455711380263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6jr-9k-uIK"/>
+                                    <constraint firstAttribute="height" constant="50" id="IZ2-x3-5Uk"/>
+                                </constraints>
+                                <state key="normal" title="GO!"/>
+                                <connections>
+                                    <action selector="onClickGoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yrv-bA-KWA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.76008679441876625" blue="0.5803483659219808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YCI-bJ-puz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ss-7A-sxL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="94v-ek-HWJ" secondAttribute="bottom" constant="100" id="8b5-ne-5yV"/>
+                            <constraint firstItem="94v-ek-HWJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZDZ-1E-2r3"/>
+                            <constraint firstItem="YCI-bJ-puz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="cCJ-3D-PAh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="f1l-Qd-Jrl"/>
+                    <connections>
+                        <outlet property="dogImageView" destination="YCI-bJ-puz" id="hAb-cF-w6s"/>
+                        <outlet property="goButton" destination="94v-ek-HWJ" id="8Xm-bp-f4M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245.59999999999999" y="138.98050974512745"/>
+        </scene>
+        <!--Selection Page View Controller-->
+        <scene sceneID="vAj-wc-zbv">
+            <objects>
+                <viewController storyboardIdentifier="SelectionPageViewController" id="04d-uE-TXm" customClass="SelectionPageViewController" customModule="DelegatePOC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JoG-rO-fpT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man_two" translatesAutoresizingMaskIntoConstraints="NO" id="H80-jc-pRd">
+                                <rect key="frame" x="84" y="348" width="207" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="207" id="VUr-fa-VnB"/>
+                                    <constraint firstAttribute="height" constant="202" id="td1-0F-Wr9"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man_one" translatesAutoresizingMaskIntoConstraints="NO" id="bmB-bt-ECs">
+                                <rect key="frame" x="68" y="99" width="239" height="209"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="209" id="KLe-Rb-hQu"/>
+                                    <constraint firstAttribute="width" constant="239" id="Sju-g0-8lK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.76078431372549016" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bmB-bt-ECs" firstAttribute="centerX" secondItem="JoG-rO-fpT" secondAttribute="centerX" id="DPs-ue-FCg"/>
+                            <constraint firstItem="H80-jc-pRd" firstAttribute="centerX" secondItem="JoG-rO-fpT" secondAttribute="centerX" id="IuI-d6-0vs"/>
+                            <constraint firstItem="H80-jc-pRd" firstAttribute="top" secondItem="bmB-bt-ECs" secondAttribute="bottom" constant="40" id="Mlg-Ka-Z9U"/>
+                            <constraint firstItem="bmB-bt-ECs" firstAttribute="top" secondItem="LTj-62-fE4" secondAttribute="top" constant="79" id="wJL-Qn-1xA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LTj-62-fE4"/>
+                    </view>
+                    <connections>
+                        <outlet property="manOneImage" destination="H80-jc-pRd" id="9jx-lk-f7g"/>
+                        <outlet property="manTwoImage" destination="bmB-bt-ECs" id="D35-Ap-lOL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWL-vq-LT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dog" width="320" height="286"/>
+        <image name="man_one" width="306" height="320"/>
+        <image name="man_two" width="315" height="320"/>
+    </resources>
 </document>
